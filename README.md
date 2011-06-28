@@ -10,6 +10,7 @@
    
     ```mkvirtualenv twitter_stream_example --no-site-packages```
 * Install the dependencies
+
         cd twitter-oauth-streaming
         pip install --requirement=requirements.txt
 
