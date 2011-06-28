@@ -6,7 +6,7 @@
 * Make sure you have pip installed on your platform
 
     ```sudo easy_install pip```
-* Create a virtualenv for Python. Optional, but recommended step. See [virtualenv](http://pypi.python.org/pypi/virtualenv) and [virtualenvwrapper](http://www.doughellmann.com/docs/virtualenvwrapper/)
+* Create a virtualenv for Python. Optional, but recommended step. See [virtualenv](http://pypi.python.org/pypi/virtualenv) and [virtualenvwrapper](http://www.doughellmann.com/docs/virtualenvwrapper/) for info on how to install these tools.
    
     ```mkvirtualenv twitter_stream_example --no-site-packages```
 * Install the dependencies
