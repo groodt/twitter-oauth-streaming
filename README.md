@@ -21,5 +21,11 @@
 * At the application settings page take note of your consumer key and consumer secret.
 * Add your consumer key and secret to the top of the twitter-oauth-streaming.py script. Search for 'CHANGEME'.
 
-## Run
-    python twitter-oauth-streaming.py
+## Running the script
+* Start the script
+
+    ```python twitter-oauth-streaming.py```
+* You should be prompted to authorize the script with Twitter. It should open a browser for you, but if not you can visit the url printed on the console.
+* Once you login to Twitter and authorize the application, you should see a Pin in the browser. This is out-of-band OAuth for Client applications like this, if it was a webapp, you would get a callback with the pin, so wouldnt need the next manual step.
+* Enter the pin onto the console.
+* Tweets should now be streaming out onto your console. Get down with your bad self!
