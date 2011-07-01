@@ -83,10 +83,10 @@ def fetch_access_token():
     print "Go to the following link in your browser:"
     print auth_url
     pin = raw_input('What is the PIN? ')
-
-    # Step 3: Get access token.
     token = oauth.Token(request_token['oauth_token'],request_token['oauth_token_secret'])
     token.set_verifier(pin)
+
+    # Step 3: Get access token.
     client = oauth.Client(CONSUMER, token)
     resp, content = client.request(TWITTER_ACCESS_TOKEN_URL, "POST")
     if resp['status'] != '200':
