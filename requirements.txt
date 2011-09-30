@@ -1,5 +1,6 @@
 Twisted==11.0.0
 httplib2==0.7.1
 oauth2==1.5.170
+pyOpenSSL==0.13
 wsgiref==0.1.2
 zope.interface==3.6.3
