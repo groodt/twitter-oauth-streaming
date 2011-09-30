@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import oauth2 as oauth
 import urlparse, time, webbrowser
-from twisted.internet import reactor, protocol
+from twisted.internet import reactor, protocol, ssl
 from twisted.web import http
 
 CONSUMER_KEY='CHANGEME'
@@ -98,7 +98,7 @@ def fetch_access_token():
     return (access_token['oauth_token'], access_token['oauth_token_secret'])
 
 def build_authorization_header(access_token):
-    url = "http://%s%s" % (TWITTER_STREAM_API_HOST, TWITTER_STREAM_API_PATH)
+    url = "https://%s%s" % (TWITTER_STREAM_API_HOST, TWITTER_STREAM_API_PATH)
     params = {
         'oauth_version': "1.0",
         'oauth_nonce': oauth.generate_nonce(),
@@ -135,5 +135,5 @@ if __name__ == '__main__':
 
     # Twitter stream using the Authorization header.
     twsf = TwitterStreamerFactory(auth_header)
-    reactor.connectTCP(TWITTER_STREAM_API_HOST, 80, twsf)
+    reactor.connectSSL(TWITTER_STREAM_API_HOST, 443, twsf, ssl.ClientContextFactory())
     reactor.run()
