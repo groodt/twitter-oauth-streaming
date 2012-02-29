@@ -117,7 +117,9 @@ def build_authorization_header(access_token):
     }
 
     # Sign the request.
-    req = oauth.Request(method="GET", url=url, parameters=params)
+    # For some messed up reason, we need to specify is_form_encoded to prevent
+    # the oauth2 library from setting oauth_body_hash which Twitter doesn't like.
+    req = oauth.Request(method="GET", url=url, parameters=params, is_form_encoded=True)
     req.sign_request(oauth.SignatureMethod_HMAC_SHA1(), CONSUMER, access_token)
 
     # Grab the Authorization header
