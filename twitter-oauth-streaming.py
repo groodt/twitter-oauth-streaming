@@ -13,9 +13,9 @@ CONSUMER = oauth.Consumer(CONSUMER_KEY, CONSUMER_SECRET)
 
 ACCESS_TOKEN_FILE = 'OAUTH_ACCESS_TOKEN'
 
-TWITTER_REQUEST_TOKEN_URL = 'http://twitter.com/oauth/request_token'
-TWITTER_ACCESS_TOKEN_URL = 'http://twitter.com/oauth/access_token'
-TWITTER_AUTHORIZE_URL = 'http://twitter.com/oauth/authorize'
+TWITTER_REQUEST_TOKEN_URL = 'https://twitter.com/oauth/request_token'
+TWITTER_ACCESS_TOKEN_URL = 'https://twitter.com/oauth/access_token'
+TWITTER_AUTHORIZE_URL = 'https://twitter.com/oauth/authorize'
 TWITTER_STREAM_API_HOST = 'stream.twitter.com'
 TWITTER_STREAM_API_PATH = '/1/statuses/sample.json'
 
